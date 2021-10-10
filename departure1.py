@@ -1,11 +1,15 @@
 from tkinter import *
 import tkinter.font as font
+from departure2 import *
 
 def my_funcc():
     root = Tk()
     root.geometry("768x1024")
     root.minsize(768, 1024)
     root.maxsize(768, 1024)
+    def myfuncf():
+        root.destroy()
+        mymap2()
     myFont = font.Font(family='Consolas', size=15)
     #labels
     fuell2 = Label(root, text="Enter Fuel Left(in litres)")
@@ -58,6 +62,7 @@ def my_funcc():
         gn = int(An5)
         An6 = pw2.get()
         pwq2 = int(An6)
+        myfuncf()
     btn = Button(root, text= "Proceed", bg = 'black', fg = 'white', command = valuegetter2)
     btn.place(relx = 0.5, rely = 0.6, anchor = 'center')
     btn['font'] = myFont
